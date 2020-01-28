@@ -10,3 +10,4 @@ rope==0.16.0
 six==1.14.0
 typed-ast==1.4.1
 wrapt==1.11.2
+wheel==0.34.1
