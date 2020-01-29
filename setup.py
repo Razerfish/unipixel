@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 
 setuptools.setup(
-    name="unipixel-razerfish",
+    name="unipixel",
     version="0.0.1",
     author="Fiona Wilson",
     author_email="fiona@razerfish.dev",
