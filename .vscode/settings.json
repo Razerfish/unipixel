@@ -5,9 +5,10 @@
         "--function-naming-style=snake_case",
         "--variable-naming-style=snake_case",
         "--const-naming-style=snake_case",
-        "--good-names=r,g,b,w,x,y,i"
+        "--good-names=r,g,b,w,x,y,i",
+        "--max-line-length=120"
     ],
     "python.formatting.autopep8Args": [
-        "--max-line-length 80"
+        "--max-line-length 120"
     ]
 }
