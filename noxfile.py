@@ -13,7 +13,7 @@ target_versions = ['3.5', '3.6', '3.7', '3.8']
 nox.options.reuse_existing_virtualenvs = True
 
 
-@nox.session(python=target_versions)
+@nox.session(python=['3.7'])
 def lint(session):
     session.install('-e', '.[lint]')
     session.run(
