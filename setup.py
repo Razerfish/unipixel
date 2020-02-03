@@ -11,7 +11,8 @@ setuptools.setup(
     version="0.0.1",
     author="Fiona Wilson",
     author_email="fiona@razerfish.dev",
-    description="A testing utility for applications that would use the adafruit-circuitpython-neopixel package",
+    description=("A testing utility for applications that would use the "
+                 "adafruit-circuitpython-neopixel package"),
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/razerfish/unipixel",
