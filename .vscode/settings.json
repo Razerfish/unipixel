@@ -6,9 +6,11 @@
         "--variable-naming-style=snake_case",
         "--const-naming-style=snake_case",
         "--good-names=r,g,b,w,x,y,i",
-        "--max-line-length=120"
+        "--max-line-length=79"
     ],
     "python.formatting.autopep8Args": [
-        "--max-line-length 120"
+        "--max-line-length",
+        "79",
+        "--aggressive"
     ]
 }
