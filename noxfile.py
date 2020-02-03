@@ -15,7 +15,7 @@ nox.options.reuse_existing_virtualenvs = True
 
 @nox.session(python=target_versions)
 def lint(session):
-    session.install("pylint", "nox", )
+    session.install('-e', '.[lint]')
     session.run(
         "pylint",
         *settings["python.linting.pylintArgs"],

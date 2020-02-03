@@ -5,6 +5,7 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+requirements = []
 
 setuptools.setup(
     name="unipixel",
@@ -24,5 +25,19 @@ setuptools.setup(
         "Natural Language :: English",
         "Programming Language :: Python :: 3.7"
     ],
-    python_requires=">=3.7"
+    python_requires=">=3.5",
+    install_requires=requirements,
+    extras_require={
+        'dev': [
+            'autopep8',
+            'nox',
+            'pylint',
+            'rope',
+            'wheel',
+        ],
+        'lint': [
+            'nox',
+            'pylint',
+        ]
+    }
 )
