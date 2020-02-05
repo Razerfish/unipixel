@@ -13,4 +13,4 @@ install:
   - pip install --upgrade pip setuptools
   - pip install nox
 
-script: nox
+script: nox --error-on-external-run
