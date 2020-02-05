@@ -1,0 +1,16 @@
+language: python
+
+os: linux
+dist: bionic
+arch: arm64
+
+matrix:
+  include:
+  - python: '3.7'
+    env: NOXSESSION=lint
+
+install:
+  - pip install --upgrade pip setuptools
+  - pip install nox
+
+script: nox
