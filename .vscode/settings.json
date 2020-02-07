@@ -12,5 +12,10 @@
         "--max-line-length",
         "79",
         "--aggressive"
-    ]
+    ],
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/env/**": true,
+    }
 }
