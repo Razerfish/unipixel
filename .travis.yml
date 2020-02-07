@@ -2,7 +2,6 @@ language: python
 
 os: linux
 dist: bionic
-arch: arm64
 
 matrix:
   include:
