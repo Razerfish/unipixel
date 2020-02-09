@@ -2,7 +2,7 @@
 
 # Unipixel - Simulate neopixels in a terminal
 
-`unipixel` is a package designed to be used interchangeably with the `adafruit-circuitpython-neopixel` package for the purposes of testing and development on systems where, for whatever reason, actual neopixels aren't available.
+`unipixel` is a package designed to be used interchangeably with the [`adafruit-circuitpython-neopixel`](https://github.com/adafruit/Adafruit_CircuitPython_NeoPixel) package for the purposes of testing and development on systems where, for whatever reason, actual neopixels aren't available.
 
 ## Note about compatibility
 
