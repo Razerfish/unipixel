@@ -12,5 +12,6 @@
         "--max-line-length",
         "79",
         "--aggressive"
-    ]
+    ],
+    "python.pythonPath": "env/bin/python"
 }
