@@ -17,4 +17,5 @@
         "**/.git/objects/**": true,
         "**/.git/subtree-cache/**": true,
         "**/env/**": true
+    }
 }
