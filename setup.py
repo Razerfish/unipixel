@@ -33,7 +33,7 @@ setuptools.setup(
             'nox',
             'pylint',
             'rope',
-            'wheel',
+            'twine'
         ],
         'lint': [
             'nox',
