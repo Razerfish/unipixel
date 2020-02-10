@@ -17,6 +17,7 @@ keyring==21.1.0
 lazy-object-proxy==1.4.3
 mccabe==0.6.1
 nox==2019.11.9
+pipdeptree==0.13.2
 pkginfo==1.5.0.1
 py==1.8.1
 pycodestyle==2.5.0
