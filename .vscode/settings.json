@@ -1,0 +1,22 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": [
+        "--class-naming-style=PascalCase",
+        "--function-naming-style=snake_case",
+        "--variable-naming-style=snake_case",
+        "--const-naming-style=snake_case",
+        "--good-names=r,g,b,w,x,y,i",
+        "--max-line-length=100"
+    ],
+    "python.formatting.autopep8Args": [
+        "--max-line-length",
+        "100",
+        "--aggressive"
+    ],
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/env/**": true
+    },
+    "python.pythonPath": "env/bin/python"
+}
