@@ -3,9 +3,9 @@ import setuptools
 
 
 with open("README.md", "r") as fh:
-    long_description = fh.read()
+    LONG_DESCRIPTION = fh.read()
 
-requirements = []
+REQUIREMENTS = []
 
 setuptools.setup(
     name="unipixel",
@@ -14,7 +14,7 @@ setuptools.setup(
     author_email="fiona@razerfish.dev",
     description=("A testing utility for applications that would use the "
                  "adafruit-circuitpython-neopixel package"),
-    long_description=long_description,
+    long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
     url="https://github.com/razerfish/unipixel",
     packages=setuptools.find_packages(),
@@ -35,7 +35,7 @@ setuptools.setup(
         "Bug Tracker": "https://github.com/Razerfish/unipixel/issues"
     },
     python_requires=">=3.5",
-    install_requires=requirements,
+    install_requires=REQUIREMENTS,
     extras_require={
         'dev': [
             'autopep8>=1.5',
