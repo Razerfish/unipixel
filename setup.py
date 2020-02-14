@@ -41,6 +41,7 @@ setuptools.setup(
             'autopep8>=1.5',
             'nox>=2019.11.9',
             'pylint>=2.4.0',
+            'pytest>=5.3.0',
             'rope>=0.16.0',
             'twine>=3.1.0'
         ],
