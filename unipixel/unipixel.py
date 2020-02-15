@@ -120,15 +120,16 @@ class UniPixel:
 
     @staticmethod
     def _rgbw_to_rgb(pixels):
-        for i, _ in enumerate(pixels):
-            red, green, blue, white = pixels[i]
+        rgb_pixels = []
+        for pixel in pixels:
+            r_in, g_in, b_in, w_in = pixel
 
-            red_out = math.floor(red + (255 - red) * white / 3 / 255)
-            green_out = math.floor(green + (255 - green) * white / 3 / 255)
-            blue_out = math.floor(blue + (255 - blue) * white / 3 / 255)
+            r_out = int(round(r_in + (255 - r_in) * w_in / 3 / 255, 0))
+            g_out = int(round(g_in + (255 - g_in) * w_in / 3 / 255, 0))
+            b_out = int(round(b_in + (255 - b_in) * w_in / 3 / 255, 0))
 
-            pixels[i] = tuple((red_out, green_out, blue_out))
-        return pixels
+            rgb_pixels.append(tuple((r_out, g_out, b_out)))
+        return rgb_pixels
 
     def deinit(self):
         """Blank out the Unipixels and print a newline"""
