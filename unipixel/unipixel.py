@@ -110,11 +110,11 @@ class UniPixel:
         if pixel_order == GRB:
             for i, _ in enumerate(pixels):
                 g, r, b = pixels[i]
-                pixels[i] = tuple(r, g, b)
+                pixels[i] = tuple((r, g, b))
         elif pixel_order == GRBW:
             for i, _ in enumerate(pixels):
                 g, r, b, w = pixels[i]
-                pixels[i] = tuple(r, g, b, w)
+                pixels[i] = tuple((r, g, b, w))
 
         return pixels
 
@@ -127,7 +127,7 @@ class UniPixel:
             green_out = math.floor(green + (255 - green) * white / 3 / 255)
             blue_out = math.floor(blue + (255 - blue) * white / 3 / 255)
 
-            pixels[i] = tuple(red_out, green_out, blue_out)
+            pixels[i] = tuple((red_out, green_out, blue_out))
         return pixels
 
     def deinit(self):
