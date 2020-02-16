@@ -8,7 +8,11 @@
     "files.watcherExclude": {
         "**/.git/objects/**": true,
         "**/.git/subtree-cache/**": true,
-        "**/env/**": true
+        "**/env/**": true,
+        "**/.nox/**": true,
+        "**/.pytest_cache/**": true,
+        "**/__pycache__/**": true,
+        "**/.ropeproject/**": true
     },
     "python.pythonPath": "env/bin/python"
 }
