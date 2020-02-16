@@ -5,6 +5,7 @@ import pytest
 
 import unipixel
 from testing_resources import RGB, RGBW
+from testing_resources import GRB, GRBW
 
 
 def test_rgb(capsys):
@@ -21,6 +22,22 @@ def test_rgb(capsys):
 
         assert out == expected
 
+
+def test_grb(capsys):
+    test_strip = unipixel.UniPixel(None, 10, bpp=3, auto_write=True, pixel_order=unipixel.GRB)
+
+    for i, _ in enumerate(GRB):
+        test_strip.fill(GRB[i])
+        test_strip.show()
+        out, _ = capsys.readouterr()
+
+        expected = Template(u"\x1b[38;2;${R};${G};${B}m\u2588\x1b[0m")
+        expected = expected.substitute(R=RGB[i][0], G=RGB[i][1], B=RGB[i][2])
+        expected = "\r" + expected * 10
+
+        assert out == expected
+
+
 def test_rgbw(capsys):
     test_strip = unipixel.UniPixel(None, 10, bpp=4, auto_write=False, pixel_order=unipixel.RGBW)
 
@@ -34,6 +51,23 @@ def test_rgbw(capsys):
 
         expected = Template(u"\x1b[38;2;${R};${G};${B}m\u2588\x1b[0m")
         r, g, b = rgbw_output[i]
+        expected = expected.substitute(R=r, G=g, B=b)
+        expected = "\r" + expected * 10
+
+        assert out == expected
+
+
+def test_grbw(capsys):
+    test_strip = unipixel.UniPixel(None, 10, bpp=4, auto_write=False, pixel_order=unipixel.GRBW)
+
+    for i, _ in enumerate(GRBW):
+        test_strip.fill(GRBW[i])
+        test_strip.show()
+        out, _ = capsys.readouterr()
+
+        expected = Template(u"\x1b[38;2;${R};${G};${B}m\u2588\x1b[0m")
+
+        r, g, b = RGBW["output"][i]
         expected = expected.substitute(R=r, G=g, B=b)
         expected = "\r" + expected * 10
 
