@@ -24,7 +24,7 @@ def test_rgb(capsys):
 
 
 def test_grb(capsys):
-    test_strip = unipixel.UniPixel(None, 10, bpp=3, auto_write=True, pixel_order=unipixel.GRB)
+    test_strip = unipixel.UniPixel(None, 10, bpp=3, auto_write=False, pixel_order=unipixel.GRB)
 
     for i, _ in enumerate(GRB):
         test_strip.fill(GRB[i])
