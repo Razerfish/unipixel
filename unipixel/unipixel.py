@@ -108,12 +108,12 @@ class UniPixel:
     @staticmethod
     def _reorder(pixels, pixel_order):
         if pixel_order == GRB:
-            for i, _ in enumerate(pixels):
-                g, r, b = pixels[i]
+            for i, pixel in enumerate(pixels):
+                r, g, b = pixel
                 pixels[i] = tuple((r, g, b))
         elif pixel_order == GRBW:
-            for i, _ in enumerate(pixels):
-                g, r, b, w = pixels[i]
+            for i, pixel in enumerate(pixels):
+                r, g, b, w = pixel
                 pixels[i] = tuple((r, g, b, w))
 
         return pixels
