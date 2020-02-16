@@ -15,3 +15,9 @@ def lint(session):
         "setup.py",
         "noxfile.py",
         "unipixel")
+
+
+@nox.session(python=['3.5', '3.6', '3.7', '3.8'])
+def test(session):
+    session.install('-e', '.[test]')
+    session.run("pytest")
