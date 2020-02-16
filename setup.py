@@ -49,7 +49,7 @@ setuptools.setup(
             'nox>=2019.11.9',
             'pylint>=2.4.0',
         ],
-        'testing': [
+        'test': [
             'nox>=2019.11.9',
             'pytest>=5.3.0',
         ]
