@@ -46,11 +46,9 @@ setuptools.setup(
             'twine>=3.1.0',
         ],
         'lint': [
-            'nox>=2019.11.9',
             'pylint>=2.4.0',
         ],
         'test': [
-            'nox>=2019.11.9',
             'pytest>=5.3.0',
             'pytest-cov>=2.8.0',
         ]
