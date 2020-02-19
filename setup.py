@@ -52,6 +52,7 @@ setuptools.setup(
         'test': [
             'nox>=2019.11.9',
             'pytest>=5.3.0',
+            'pytest-cov>=2.8.0',
         ]
     }
 )
