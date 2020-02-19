@@ -4,8 +4,8 @@ from string import Template
 import pytest
 
 import unipixel
-from testing_resources import RGB, RGBW
-from testing_resources import GRB, GRBW
+from .testing_resources import RGB, RGBW
+from .testing_resources import GRB, GRBW
 
 
 def test_rgb(capsys):

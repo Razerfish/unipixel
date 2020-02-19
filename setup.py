@@ -17,7 +17,7 @@ setuptools.setup(
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
     url="https://github.com/razerfish/unipixel",
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages(exclude=['tests']),
     classifiers=[
         "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
