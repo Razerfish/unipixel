@@ -73,3 +73,10 @@ def test_grbw(capsys):
         expected = "\r" + expected * 10
 
         assert out == expected
+
+
+def test_none():
+    with pytest.raises(ValueError):
+        test_strip = unipixel.UniPixel(None, 10, auto_write=False)
+
+        test_strip.fill((0, 0, 0, 255))
