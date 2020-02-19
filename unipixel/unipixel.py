@@ -82,7 +82,7 @@ class UniPixel:
         # Group the color values from the buffer into pixels.
         buf = list(self.buf)
         pixels = list(zip_longest(*([iter(buf)] * self.bpp)))
-        if self.order is not RGB or self.order is not RGBW:
+        if self.order is not RGB and self.order is not RGBW:
             pixels = self._reorder(pixels, self.order)
         if self.bpp == 4:
             pixels = self._rgbw_to_rgb(pixels)
