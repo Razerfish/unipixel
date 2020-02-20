@@ -1,11 +1,10 @@
-# pylint: disable=missing-module-docstring,missing-function-docstring,unused-import
+# pylint: disable=missing-module-docstring,missing-function-docstring,unused-import,wildcard-import
 from string import Template
 
 import pytest
 
 import unipixel
-from .testing_resources import RGB, RGBW
-from .testing_resources import GRB, GRBW
+from .testing_resources import *
 
 
 def test_rgb(capsys):
