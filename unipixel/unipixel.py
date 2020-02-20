@@ -111,7 +111,8 @@ class UniPixel:
             for i, pixel in enumerate(pixels):
                 r, g, b = pixel
                 pixels[i] = tuple((r, g, b))
-        elif pixel_order == GRBW:
+
+        else:
             for i, pixel in enumerate(pixels):
                 r, g, b, w = pixel
                 pixels[i] = tuple((r, g, b, w))
