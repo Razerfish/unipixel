@@ -1,4 +1,6 @@
 # pylint: disable-all
+import itertools
+
 RGB = [
     (128, 0, 0),
     (139, 0, 0),
@@ -728,3 +730,13 @@ rainbow = [
     (0,128,128),
     (0,0,128),
 ]
+
+def product_dict(**kwargs):
+    keys = kwargs.keys()
+    vals = kwargs.values()
+
+    product = []
+    for item in itertools.product(*vals):
+        product.append(dict(zip(keys, item)))
+
+    return product
