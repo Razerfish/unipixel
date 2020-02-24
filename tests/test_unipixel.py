@@ -4,7 +4,7 @@ from string import Template
 import pytest
 
 import unipixel
-from .testing_resources import *
+from .resources import *
 
 
 def test_rgb(capsys):
