@@ -9,23 +9,13 @@ from . import resources
 from . import utils
 
 
-# I know that contextlib contains a nullcontext class but it isn't supported until python3.7
-# pylint: disable=invalid-name,missing-class-docstring
-class nullcontext():
-    def __enter__(self):
-        return None
-    def __exit__(self, exc_type, exc_value, traceback):
-        return False
-# pylint: enable=invalid-name,missing-class-docstring
-
-
 def test_fill(test_strip, capsys):
     test_strip, input_set, output_set, params = test_strip
 
     if params["pixel_order"] is None and params["bpp"] < 4:
         case = pytest.raises(ValueError)
     else:
-        case = nullcontext()
+        case = utils.nullcontext()
 
     with case:
         for _, (input_color, output_color) in enumerate(zip(input_set, output_set)):
