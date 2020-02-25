@@ -10,7 +10,33 @@ from . import utils
 
 
 def test_fill(test_strip, capsys):
-    test_strip, input_set, output_set, params = test_strip
+    test_strip, params = test_strip
+
+    if params["pixel_order"] == unipixel.RGB:
+        input_set = resources.RGB
+        output_set = resources.RGB
+
+    elif params["pixel_order"] == unipixel.GRB:
+        input_set = resources.GRB
+        output_set = resources.RGB
+
+    elif params["pixel_order"] == unipixel.RGBW:
+        input_set = resources.RGBW["input"]
+        output_set = resources.RGBW["output"]
+
+    elif params["pixel_order"] == unipixel.GRBW:
+        input_set = resources.GRBW
+        output_set = resources.RGBW["output"]
+
+    elif params["pixel_order"] is None:
+        input_set = resources.GRBW
+        output_set = resources.RGBW["output"]
+
+    else:
+        if not isinstance(params["pixel_order"], tuple) and params["pixel_order"] is not None:
+            raise TypeError("pixel_order must be a tuple or None")
+
+        raise ValueError("Unknown pixel_order")
 
     if params["pixel_order"] is None and params["bpp"] < 4:
         case = pytest.raises(ValueError)
@@ -18,7 +44,7 @@ def test_fill(test_strip, capsys):
         case = utils.nullcontext()
 
     with case:
-        for _, (input_color, output_color) in enumerate(zip(input_set, output_set)):
+        for (input_color, output_color) in zip(input_set, output_set):
             test_strip.fill(input_color)
             if not params["auto_write"]:
                 test_strip.show()
