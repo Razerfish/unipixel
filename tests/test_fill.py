@@ -13,24 +13,19 @@ def test_fill(test_strip, capsys):
     test_strip, params = test_strip
 
     if params["pixel_order"] == unipixel.RGB:
-        input_set = resources.RGB
-        output_set = resources.RGB
+        test_data = zip(resources.RGB, resources.RGB)
 
     elif params["pixel_order"] == unipixel.GRB:
-        input_set = resources.GRB
-        output_set = resources.RGB
+        test_data = zip(resources.GRB, resources.RGB)
 
     elif params["pixel_order"] == unipixel.RGBW:
-        input_set = resources.RGBW["input"]
-        output_set = resources.RGBW["output"]
+        test_data = zip(resources.RGBW["input"], resources.RGBW["output"])
 
     elif params["pixel_order"] == unipixel.GRBW:
-        input_set = resources.GRBW
-        output_set = resources.RGBW["output"]
+        test_data = zip(resources.GRBW, resources.RGBW["output"])
 
     elif params["pixel_order"] is None:
-        input_set = resources.GRBW
-        output_set = resources.RGBW["output"]
+        test_data = zip(resources.GRBW, resources.RGBW["output"])
 
     else:
         if not isinstance(params["pixel_order"], tuple) and params["pixel_order"] is not None:
@@ -44,7 +39,7 @@ def test_fill(test_strip, capsys):
         case = utils.nullcontext()
 
     with case:
-        for (input_color, output_color) in zip(input_set, output_set):
+        for (input_color, output_color) in test_data:
             test_strip.fill(input_color)
             if not params["auto_write"]:
                 test_strip.show()
