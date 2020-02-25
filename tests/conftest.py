@@ -4,7 +4,6 @@ import pytest
 import unipixel
 
 from . import utils
-from . import resources
 
 PARAMS = utils.product_dict(**{
     "pin": [None],
