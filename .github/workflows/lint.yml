@@ -1,9 +1,9 @@
-name: Lint
+name: linting
 
 on: [push, pull_request]
 
 jobs:
-  Lint:
+  pylint:
     runs-on: ubuntu-latest
     env:
       NOXSESSION: lint

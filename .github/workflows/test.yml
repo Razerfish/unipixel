@@ -1,9 +1,9 @@
-name: Test
+name: tests
 
 on: [push, pull_request]
 
 jobs:
-  test:
+  pytest:
     runs-on: ubuntu-latest
     strategy:
       matrix:
