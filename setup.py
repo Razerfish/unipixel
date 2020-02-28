@@ -42,6 +42,7 @@ setuptools.setup(
             'nox>=2019.11.9',
             'pylint==2.4.*',
             'pytest==5.3.*',
+            'pytest-cov==2.8.*',
             'rope==0.16.*',
             'twine==3.1.*',
         ],
