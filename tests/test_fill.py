@@ -49,6 +49,6 @@ def test_fill(test_strip, capsys):
             expected = Template(u"\x1b[38;2;${R};${G};${B}m\u2588\x1b[0m")
             r, g, b = output_color
             expected = expected.substitute(R=r, G=g, B=b)
-            expected = "\r" + expected * 10
+            expected = "\r" + expected * 16
 
             assert out == expected

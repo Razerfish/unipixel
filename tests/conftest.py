@@ -7,7 +7,7 @@ from . import utils
 
 PARAMS = utils.product_dict(**{
     "pin": [None],
-    "n": [10],
+    "n": [16],
     "auto_write": [True, False],
     "bpp": [3, 4],
     "pixel_order": [unipixel.RGB, unipixel.GRB, unipixel.RGBW, unipixel.GRBW, None]
