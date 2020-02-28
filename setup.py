@@ -38,19 +38,19 @@ setuptools.setup(
     install_requires=REQUIREMENTS,
     extras_require={
         'dev': [
-            'autopep8>=1.5',
+            'autopep8==1.5.*',
             'nox>=2019.11.9',
-            'pylint>=2.4.0',
-            'pytest>=5.3.0',
-            'rope>=0.16.0',
-            'twine>=3.1.0',
+            'pylint==2.4.*',
+            'pytest==5.3.*',
+            'rope==0.16.*',
+            'twine==3.1.*',
         ],
         'lint': [
-            'pylint>=2.4.0',
+            'pylint==2.4.*',
         ],
         'test': [
-            'pytest>=5.3.0',
-            'pytest-cov>=2.8.0',
+            'pytest==5.3.*',
+            'pytest-cov==2.8.*',
         ]
     }
 )
