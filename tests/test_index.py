@@ -8,7 +8,7 @@ from . import resources
 from . import utils
 
 
-def test_index(test_strip, capsys):
+def test_set_index(test_strip, capsys):
     test_strip, params = test_strip
 
     if params["pixel_order"] == unipixel.RGB:
@@ -61,7 +61,7 @@ def test_index(test_strip, capsys):
             assert out == reference_string
 
 
-def test_index_reverse(test_strip, capsys):
+def test_set_index_reverse(test_strip, capsys):
     test_strip, params = test_strip
 
     if params["pixel_order"] == unipixel.RGB:
