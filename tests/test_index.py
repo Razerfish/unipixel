@@ -129,6 +129,8 @@ def test_set_index_reverse(test_strip, capsys):
         case = utils.nullcontext()
 
     with case:
+        pixel_template = Template(u"\x1b[38;2;${R};${G};${B}m\u2588\x1b[0m")
+
         reference_strip = []
         for i in range(16):
             reference_strip.append(pixel_template.substitute(R=0, G=0, B=0))
