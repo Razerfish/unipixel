@@ -61,6 +61,44 @@ def test_set_index(test_strip, capsys):
             assert out == reference_string
 
 
+def test_get_index(test_strip):
+    test_strip, params = test_strip
+
+    if params["pixel_order"] == unipixel.RGB:
+        test_data = resources.index_rgb
+
+    elif params["pixel_order"] == unipixel.GRB:
+        test_data = resources.index_grb
+
+    elif params["pixel_order"] == unipixel.RGBW:
+        test_data = resources.index_rgbw["input"]
+
+    elif params["pixel_order"] == unipixel.GRBW:
+        test_data = resources.index_grbw
+
+    elif params["pixel_order"] is None:
+        test_data = resources.index_grbw
+
+    else:
+        if not isinstance(params["pixel_order"], tuple) and params["pixel_order"] is not None:
+            raise TypeError("pixel_order must be a tuple or None")
+        raise ValueError("Unknown pixel order")
+
+    if params["pixel_order"] is None and params["bpp"] < 4:
+        case = pytest.raises(ValueError)
+    else:
+        case = utils.nullcontext()
+
+    with case:
+        pixel_template = Template(u"\x1b[38;2;${R};${G};${B}m\u2588\x1b[0m")
+
+        for i in range(len(test_strip)):
+            test_strip[i] = test_data[i]
+
+        for i in range(len(test_strip)):
+            assert test_strip[i] == test_data[i]
+
+
 def test_set_index_reverse(test_strip, capsys):
     test_strip, params = test_strip
 
