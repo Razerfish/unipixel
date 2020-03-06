@@ -9,7 +9,7 @@ REQUIREMENTS = []
 
 setuptools.setup(
     name="unipixel",
-    version="0.0.1",
+    version="1.0.0",
     author="Fiona Wilson",
     author_email="fiona@razerfish.dev",
     description=("A testing utility for applications that would use the "
