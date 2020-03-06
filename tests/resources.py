@@ -1,4 +1,3 @@
-# pylint: disable-all
 RGB = [
     (128, 0, 0),
     (139, 0, 0),
