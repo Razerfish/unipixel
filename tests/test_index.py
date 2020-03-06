@@ -30,7 +30,7 @@ def test_set_index(test_strip, capsys):
         if not isinstance(params["pixel_order"], tuple) and params["pixel_order"] is not None:
             raise TypeError("pixel_order must be a tuple or None")
 
-        raise ValueError("Unkown pixel_order" + str(type(params["pixel_order"])))
+        raise ValueError("Unknown pixel_order")
 
     if params["pixel_order"] is None and params["bpp"] < 4:
         case = pytest.raises(ValueError)
@@ -83,7 +83,7 @@ def test_set_index_reverse(test_strip, capsys):
         if not isinstance(params["pixel_order"], tuple) and params["pixel_order"] is not None:
             raise TypeError("pixel_order must be a tuple or None")
 
-        raise ValueError("Unkown pixel_order" + str(type(params["pixel_order"])))
+        raise ValueError("Unknown pixel_order")
 
     if params["pixel_order"] is None and params["bpp"] < 4:
         case = pytest.raises(ValueError)
@@ -136,7 +136,7 @@ def test_slice(test_strip, capsys):
         if not isinstance(params["pixel_order"], tuple) and params["pixel_order"] is not None:
             raise TypeError("pixel_order must be a tuple or None")
 
-        raise ValueError("Unkown pixel_order" + str(type(params["pixel_order"])))
+        raise ValueError("Unknown pixel_order")
 
     if params["pixel_order"] is None and params["bpp"] < 4:
         case = pytest.raises(ValueError)
