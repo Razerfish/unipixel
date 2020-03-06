@@ -90,8 +90,6 @@ def test_get_index(test_strip):
         case = utils.nullcontext()
 
     with case:
-        pixel_template = Template(u"\x1b[38;2;${R};${G};${B}m\u2588\x1b[0m")
-
         for i in range(len(test_strip)):
             test_strip[i] = test_data[i]
 
