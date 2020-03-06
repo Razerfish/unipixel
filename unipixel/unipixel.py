@@ -209,7 +209,7 @@ class UniPixel:
             for in_i in range(*index.indices(len(self.buf) // self.bpp)):
                 out.append(tuple(self.buf[in_i * self.bpp + self.order[i]]
                                  for i in range(self.bpp)))
-                return out
+            return out
         if index < 0:
             index += len(self)
         if index >= self.n or index < 0:
