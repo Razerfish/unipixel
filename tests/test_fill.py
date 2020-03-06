@@ -1,4 +1,3 @@
-# pylint: disable=missing-module-docstring,missing-function-docstring,unused-import,wildcard-import
 from string import Template
 
 import pytest
