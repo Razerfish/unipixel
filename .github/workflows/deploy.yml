@@ -1,11 +1,11 @@
-name: Upload to PyPi
+name: Deploy
 
 on:
   release:
     types: [created]
 
 jobs:
-  deploy:
+  Upload to PyPi:
 
     runs-on: ubuntu-latest
 
