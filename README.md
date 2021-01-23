@@ -6,6 +6,6 @@
 
 ## Note about compatibility
 
-`unipixel` works by wrapping the &#9608; (`0x2588`) unicode character in ANSI color escape sequences. This method requires a terminal that supports both unicode and "true color" for `unipixel` to render properly.
+unipixel works by wrapping the &#9608; (`0x2588`) unicode character in ANSI color escape sequences. This method requires a terminal that supports both unicode and true color for unipixel to render properly.
 
 A list of terminals that support true color can be found [here.](https://gist.github.com/XVilka/8346728)
